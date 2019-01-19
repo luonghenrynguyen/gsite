@@ -17,12 +17,12 @@ from django.conf.urls import include
 from django.urls import path
 from django.contrib import admin
 from django.contrib.auth import views
-from .views import home
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('auth/', include('social_django.urls', namespace='social')),  # <- Here
-    path('', home, name='home'),
+    
 ]
