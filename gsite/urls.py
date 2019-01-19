@@ -24,5 +24,6 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('auth/', include('social_django.urls', namespace='social')),  # <- Here
+    path('', home, name='home'),
     
 ]
